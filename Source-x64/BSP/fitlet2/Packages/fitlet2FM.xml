@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FeatureManifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/embedded/2004/10/ImageUpdate">
+  <BasePackages>
+     <!-- System Information package for providing system details , required for DM enrollment etc -->
+     <PackageFile Path="%PKGBLD_DIR%" Name="%OEM_NAME%.Device.SystemInformation.cab"/>
+     <!-- UEFI for the silicon packaged in Bootfirmware -->
+
+     <!-- Drivers required for boot/reading partitions for UpdateOS -->
+
+     <!--  BCD Settings -->
+
+     <!-- Device Info/ Device Targeting Info -->
+
+     <!-- Mandatory device drivers -->
+
+     <!-- Device specific customisations if any -->
+
+  </BasePackages>
+
+  <DeviceLayoutPackages>
+    <!-- GPT 4GB layout  -->
+    <PackageFile SOC="fitlet2_SOC" Path="%PKGBLD_DIR%" Name="%OEM_NAME%.DeviceLayout.GPT8GB-R.cab"/>
+  </DeviceLayoutPackages>
+
+  <OEMDevicePlatformPackages>
+    <!-- GPT 4GB layout  -->
+    <PackageFile Device="fitlet2_Device" Path="%PKGBLD_DIR%" Name="%OEM_NAME%.DeviceLayout.GPT8GB-R.cab"/>
+  </OEMDevicePlatformPackages>
+
+  <Features>
+    <Microsoft />
+    <MSFeatureGroups />
+    <OEM>
+     <PackageFile Path="%PKGBLD_DIR%" Name="%OEM_NAME%.fitlet2.GFX.cab">
+      <FeatureIDs>
+        <FeatureID>FITLET2_DRIVERS</FeatureID>
+      </FeatureIDs>
+     </PackageFile>
+
+     <PackageFile Path="%PKGBLD_DIR%" Name="%OEM_NAME%.fitlet2.GPIO.cab">
+      <FeatureIDs>
+        <FeatureID>FITLET2_DRIVERS</FeatureID>
+      </FeatureIDs>
+     </PackageFile>
+
+     <PackageFile Path="%PKGBLD_DIR%" Name="%OEM_NAME%.fitlet2.I2C.cab">
+      <FeatureIDs>
+        <FeatureID>FITLET2_DRIVERS</FeatureID>
+      </FeatureIDs>
+     </PackageFile> 
+
+      <PackageFile Path="%PKGBLD_DIR%" Name="%OEM_NAME%.fitlet2.TXEI.cab">
+      <FeatureIDs>
+        <FeatureID>FITLET2_DRIVERS</FeatureID>
+      </FeatureIDs>
+     </PackageFile>
+
+     <PackageFile Path="%PKGBLD_DIR%" Name="%OEM_NAME%.fitlet2.UART.cab">
+      <FeatureIDs>
+        <FeatureID>FITLET2_DRIVERS</FeatureID>
+      </FeatureIDs>
+     </PackageFile> 
+
+   </OEM>
+   <OEMFeatureGroups />
+  </Features>
+</FeatureManifest>
