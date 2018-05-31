@@ -61,6 +61,18 @@
       </FeatureIDs>
      </PackageFile> 
 
+     <PackageFile Path="%PKGBLD_DIR%" Name="%OEM_NAME%.fitlet2.WIFI.cab">
+      <FeatureIDs>
+        <FeatureID>FITLET2_DRIVERS</FeatureID>
+      </FeatureIDs>
+     </PackageFile> 
+
+     <PackageFile Path="%PKGBLD_DIR%" Name="%OEM_NAME%.fitlet2.BT.cab">
+      <FeatureIDs>
+        <FeatureID>FITLET2_DRIVERS</FeatureID>
+      </FeatureIDs>
+     </PackageFile> 
+
    </OEM>
    <OEMFeatureGroups />
   </Features>
